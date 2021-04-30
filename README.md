@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-To see the live project , [click here](https://lab1b.github.io/covid19-cases/).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
