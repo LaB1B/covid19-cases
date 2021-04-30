@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-see live project  [in here](https://laB1B.github.oo/covid19-cases).
+see live project  [in here](https://laB1B.github.io/covid19-cases).
 
 ## Available Scripts
 
