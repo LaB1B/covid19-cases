@@ -53,9 +53,9 @@ class App extends Component {
           <small>follow creator on :</small>
           <div>
 
-          <a href="https://facebook.com/asif.zawad.54/" target = "_blank"><img class = "facebook" src = {facebook} alt=""/></a>
-          <a href="https://github.com/LaB1B" target = "_blank"><img class = "facebook" src = {github} alt=""/></a>
-          <a href="" target = "_blank"><img class = "facebook" src = {twitter} alt=""/></a>
+          <a href="https://facebook.com/asif.zawad.54/" target = "_blank"><img  src = {facebook} alt=""/></a>
+          <a href="https://github.com/LaB1B" target = "_blank"><img  src = {github} alt=""/></a>
+          <a href="" target = "_blank"><img src = {twitter} alt=""/></a>
           </div>
           </div>
         </footer>
