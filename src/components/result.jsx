@@ -23,14 +23,14 @@ class Result extends Component {
                <h1 className = "global">Global</h1>
 
                <h1 className = "cases">Total covid new cases : </h1>
-               <h2 className = "cases-number" >{allData.Global.TotalConfirmed}</h2>
-               <h3 className = "newCases">new : {allData.Global.NewConfirmed}</h3>
+               <h2 className = "cases-number" >{numberWithCommas(allData.Global.TotalConfirmed)}</h2>
+               <h3 className = "newCases">new : { numberWithCommas(allData.Global.NewConfirmed)}</h3>
                <h1 fontSize = "2.3rem">TOTAL deaths : </h1>
-               <h3 className = "total-deaths">{allData.Global.TotalDeaths}</h3>
-               <h3 className = "new-deaths" > new :   {allData.Global.NewDeaths}</h3>
+               <h3 className = "total-deaths">{numberWithCommas(allData.Global.TotalDeaths)}</h3>
+               <h3 className = "new-deaths" > new :   {numberWithCommas(allData.Global.NewDeaths)}</h3>
                <h1>Total recovered : </h1>
-               <h1 className = "total-recovered">{allData.Global.TotalRecovered}</h1>
-               <h3> new : {allData.Global.NewRecovered}</h3>
+               <h1 className = "total-recovered">{numberWithCommas(allData.Global.TotalRecovered)}</h1>
+               <h3> new : {numberWithCommas(allData.Global.NewRecovered)}</h3>
             </header>
             
                <div className = "searchBox"><input type="text"  onChange = {this.handleChange} placeholder = "find your country" name="" id=""/></div>
@@ -54,12 +54,12 @@ class Result extends Component {
             <tr key = {M.ID} style = {{textAlign:"center"}}>
                <td >1</td>
                <td><b>{M.Country}</b></td>
-               <td className = {M.NewConfirmed === 0 ? "redColor@" : null}>{(M.NewConfirmed === 0 ? <small>N/D</small> : <b fontSize = "1.2rem">{M.NewConfirmed}</b>)}</td>
-               <td><b>{M.TotalConfirmed}</b></td>
-               <td>{(M.NewDeaths === 0 ? <small>N/D</small> : <b fontSize = "1.2rem">{M.NewDeaths}</b>)}</td>
-               <td><b>{M.TotalDeaths}</b></td>
-               <td>{(M.NewRecovered === 0 ? <small>N/D</small> : <b fontSize = "1.2rem">{M.NewRecovered}</b>)}</td>
-               <td><b>{M.TotalRecovered}</b></td>
+               <td className = {M.NewConfirmed === 0 ? "redColor@" : null}>{(M.NewConfirmed === 0 ? <small>N/D</small> : <b fontSize = "1.2rem">{numberWithCommas(M.NewConfirmed)}</b>)}</td>
+               <td><b>{numberWithCommas(M.TotalConfirmed)}</b></td>
+               <td>{(M.NewDeaths === 0 ? <small>N/D</small> : <b fontSize = "1.2rem">{numberWithCommas(M.NewDeaths)}</b>)}</td>
+               <td><b>{numberWithCommas(M.TotalDeaths)}</b></td>
+               <td>{(M.NewRecovered === 0 ? <small>N/D</small> : <b fontSize = "1.2rem"> {numberWithCommas(M.NewRecovered)}</b>)}</td>
+               <td><b>{numberWithCommas(M.TotalRecovered)}</b></td>
             </tr>
         )
      })}
@@ -69,6 +69,17 @@ class Result extends Component {
          </React.Fragment>
       )
    }
+
+
 }
+
+function numberWithCommas(x) {
+    x = x.toString();
+    var pattern = /(-?\d+)(\d{3})/;
+    while (pattern.test(x))
+        x = x.replace(pattern, "$1,$2");
+    return x;
+}
+
 
 export default Result
