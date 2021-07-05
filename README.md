@@ -2,6 +2,8 @@
 
 see live project in  [**live Project**](https://lab1b.github.io/covid19-cases/)
 
+![alt text](./src/picture.png)
+
 ## Dependencies
 
 Use the package manager [NPM](https://www.npmjs.com/) to install [React](https://reactjs.org/) , [Axios](https://github.com/axios/axios) and [Bootstrap](https://getbootstrap.com/)
