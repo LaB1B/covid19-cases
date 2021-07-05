@@ -36,7 +36,7 @@ class Result extends Component {
                <div className = "searchBox"><input type="text"  onChange = {this.handleChange} placeholder = "find your country" name="" id=""/></div>
                <table className="table">
   <thead>
-    <tr>
+    <tr> 
       <th scope="col">#</th>
       <th scope="col">country</th>
       <th scope="col">NewConfirmed</th>
@@ -52,7 +52,7 @@ class Result extends Component {
         
         return (
             <tr key = {M.ID} style = {{textAlign:"center"}}>
-               <td >1</td>
+               <td >{M.rank}</td>
                <td><b>{M.Country}</b></td>
                <td className = {M.NewConfirmed === 0 ? "redColor@" : null}>{(M.NewConfirmed === 0 ? <small>N/D</small> : <b fontSize = "1.2rem">{numberWithCommas(M.NewConfirmed)}</b>)}</td>
                <td><b>{numberWithCommas(M.TotalConfirmed)}</b></td>
