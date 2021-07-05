@@ -2,7 +2,7 @@
 
 see live project in  [**live Project**](https://lab1b.github.io/covid19-cases/)
 
-![alt text](./src/picture.png)
+![alt text](./public/picture.png)
 
 ## Dependencies
 
